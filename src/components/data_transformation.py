@@ -12,6 +12,8 @@ from pathlib import Path
 from scipy.stats import chi2_contingency
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from scipy.stats import f_oneway
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
 
 
 @dataclass
@@ -32,7 +34,7 @@ class DataTransformation:
             logging.info("data is loaded for transformation.")
 
             logging.info(f'cs1 data : \n{cs1_df.head().to_string()}')
-            logging.info(f'cs1 data : \n{cs2_df.head().to_string()}')
+            logging.info(f'cs2 data : \n{cs2_df.head().to_string()}')
 
             
             # removing null values
@@ -131,7 +133,18 @@ class DataTransformation:
 
             logging.info('Done with data transformation')
 
-            return df_encoded
+            logging.info("Preparing train and test data")
+
+            y=df_encoded['Approved_Flag']
+            x=df_encoded.drop(['Approved_Flag'],axis=1)
+            label_encoder = LabelEncoder()
+            y_encoded = label_encoder.fit_transform(y)
+
+            logging.info("Splitting data frame")
+            
+            x_train,x_test,y_train,y_test = train_test_split(x,y_encoded,test_size=0.2,random_state=42)
+
+            return (x_train,x_test,y_train,y_test)
 
 
 

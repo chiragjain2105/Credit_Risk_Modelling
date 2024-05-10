@@ -7,9 +7,9 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 import xgboost as xgb
-from sklearn.preprocessing import LabelEncoder
+
 from sklearn.model_selection import GridSearchCV
-from sklearn.model_selection import train_test_split
+
 from src.utils.utils import save_objects,evaluate_model
 
 @dataclass
@@ -20,16 +20,16 @@ class ModelTrainer:
     def __init__(self):
         self.model_training_config = ModelTrainerConfig()
 
-    def initiate_model_training(self,df_encoded):
+    def initiate_model_training(self,x_train,x_test,y_train,y_test):
         try:
-            y=df_encoded['Approved_Flag']
-            x=df_encoded.drop(['Approved_Flag'],axis=1)
-            label_encoder = LabelEncoder()
-            y_encoded = label_encoder.fit_transform(y)
+            # y=df_encoded['Approved_Flag']
+            # x=df_encoded.drop(['Approved_Flag'],axis=1)
+            # label_encoder = LabelEncoder()
+            # y_encoded = label_encoder.fit_transform(y)
 
-            logging.info("Splitting data frame")
+            # logging.info("Splitting data frame")
             
-            x_train,x_test,y_train,y_test = train_test_split(x,y_encoded,test_size=0.2,random_state=42)
+            # x_train,x_test,y_train,y_test = train_test_split(x,y_encoded,test_size=0.2,random_state=42)
 
             
             xgb_model = xgb.XGBClassifier(objective='multi:softmax', num_class=4)

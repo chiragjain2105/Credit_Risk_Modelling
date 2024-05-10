@@ -18,7 +18,7 @@ class DataIngestion:
         self.ingestion_config = DataIngestionConfig()
     
     def initiate_data_ingestion(self):
-        logging.info("Data Ingesstion Started")
+        logging.info("Data Ingestion Started")
 
         try:
             cs1_data = pd.read_excel('experiment\case_study1.xlsx')

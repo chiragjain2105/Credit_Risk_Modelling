@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/chirag/Desktop/ML-Project/Credit_Risk_Modelling/mlruns/0/ffb9fa104150424f8abc22f51951bb95/artifacts
+end_time: 1715326537339
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ffb9fa104150424f8abc22f51951bb95
+run_name: placid-moth-299
+run_uuid: ffb9fa104150424f8abc22f51951bb95
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1715326527293
+status: 3
+tags: []
+user_id: chirag

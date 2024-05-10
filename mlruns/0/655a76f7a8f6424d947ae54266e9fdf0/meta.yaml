@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/chirag/Desktop/ML-Project/Credit_Risk_Modelling/mlruns/0/655a76f7a8f6424d947ae54266e9fdf0/artifacts
+end_time: 1715323863146
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 655a76f7a8f6424d947ae54266e9fdf0
+run_name: vaunted-boar-267
+run_uuid: 655a76f7a8f6424d947ae54266e9fdf0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1715323862266
+status: 4
+tags: []
+user_id: chirag

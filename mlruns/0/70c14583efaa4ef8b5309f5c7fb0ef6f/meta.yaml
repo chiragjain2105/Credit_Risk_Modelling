@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/chirag/Desktop/ML-Project/Credit_Risk_Modelling/mlruns/0/70c14583efaa4ef8b5309f5c7fb0ef6f/artifacts
+end_time: 1715324687657
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 70c14583efaa4ef8b5309f5c7fb0ef6f
+run_name: industrious-dove-205
+run_uuid: 70c14583efaa4ef8b5309f5c7fb0ef6f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1715324675403
+status: 3
+tags: []
+user_id: chirag
